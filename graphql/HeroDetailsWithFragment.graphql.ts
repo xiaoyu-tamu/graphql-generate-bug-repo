@@ -1,4 +1,4 @@
-import * as Types from '../test2-pre-resolve-types-only-operation-types';
+import * as Types from '../test2-base';
 
 import { HeroDetails_Human_Fragment, HeroDetails_Droid_Fragment } from './HeroDetailsFragment.graphql';
 import gql from 'graphql-tag';
