@@ -1,0 +1,41 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "generate": "graphql-codegen"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "test",
+  "author": "Michael Li",
+  "module": "dist/test.esm.js",
+  "devDependencies": {
+    "@graphql-codegen/cli": "1.13.4",
+    "@graphql-codegen/introspection": "1.13.4",
+    "@graphql-codegen/near-operation-file-preset": "1.13.4",
+    "@graphql-codegen/typescript": "1.13.4",
+    "@graphql-codegen/typescript-operations": "1.13.4",
+    "@graphql-codegen/typescript-react-apollo": "1.13.4",
+    "graphql": "15.0.0"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.0.0-beta.44"
+  }
+}

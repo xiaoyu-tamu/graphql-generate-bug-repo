@@ -1,0 +1,36 @@
+overwrite: true
+includes: ['**/*.{graphql,gql,js,jsx,ts,tsx}']
+generates:
+  ./test1.ts:
+    schema: ./starwar.schema.json
+    documents: ./graphql/*.graphql
+    config:
+      preResolveTypes: true
+      onlyOperationTypes: true
+    plugins:
+      - typescript
+      - typescript-operations
+
+  ./test2-base.ts:
+    schema: ./starwar.schema.json
+    config:
+      onlyOperationTypes: true
+    plugins:
+      - typescript
+  ./:
+    schema: ./starwar.schema.json
+    documents: ./graphql/*.graphql
+    preset: near-operation-file
+    presetConfig:
+      extension: .graphql.ts
+      baseTypesPath: test2-pre-resolve-types-only-operation-types.ts
+    config:
+      reactApolloVersion: 3
+      withComponent: false
+      withHOC: false
+      withHooks: true
+      preResolveTypes: true
+
+    plugins:
+      - typescript-operations
+      - typescript-react-apollo
