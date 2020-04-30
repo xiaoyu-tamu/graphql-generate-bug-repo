@@ -23,7 +23,7 @@ generates:
     preset: near-operation-file
     presetConfig:
       extension: .graphql.ts
-      baseTypesPath: test2-pre-resolve-types-only-operation-types.ts
+      baseTypesPath: test2-base.ts
     config:
       reactApolloVersion: 3
       withComponent: false
